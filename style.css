@@ -13,6 +13,33 @@
     margin: 0;
     padding: 0;
 }
+
+/* Marquee Styles */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background-color: #01ACFD;
+  color: white;
+  padding: 1rem 0;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.marquee p {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 /* hamburger */
 .navbar2{
     display: none;
@@ -588,3 +615,9 @@
       transform: rotate(-45deg) translate(0.35rem, -0.35rem);
     }
   }
+  /* Responsive Marquee */
+@media screen and (max-width: 575px) {
+  .marquee p {
+    font-size: 1rem;
+  }
+}
